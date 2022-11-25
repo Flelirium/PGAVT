@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(./images/background.png);
+            min-height: 100vh;
+            
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 350px;
+            width: 300px;
+            flex-direction: column;
+            gap: 35px;
+            border-radius: 15px;
+            background-color: rgb(54, 204, 231);
+            box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.075), -16px -16px 32px rgba(0, 0, 0, 0.075) ;
+        }
+        .inputBox{
+            position: relative;
+            width: 250px;
+        }
+        .inputBox input{
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            color: black;
+            font-size: 1em;
+            background: transparent;
+            border-left: 2px solid black;
+            transition: 0.1s;
+        }
+        .inputBox span{
+            margin-top: 5px;
+            position: absolute;
+            left: 0;
+            transform: translateY(-4px);
+            margin-left: 10px;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 12px;
+            color: black;
+            text-transform: uppercase;
+            transition: 0.5s;
+            letter-spacing: 3px;
+        }
+       button{
+        height: 45px;
+        width: 100px;
+        border-radius: 5px;
+        border: 2px solid black;
+        cursor: pointer;
+        background-color: transparent;
+        transition: 0.5s;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2px;
+       }
+
+       .inputBox input:valid~span,
+       .inputBox input:focus~span{
+        transform: translateX(113px) translateY(-15px);
+        font-size: 0.5em;
+        padding: 5px 10px;
+        background: black;
+        letter-spacing: 0.2em;
+        color: aqua;
+        border: 2px;
+       }
+       .baloni img{
+    width: 75px;
+    animation: baloni 7s linear infinite;
+}
+/* Balloon properties  */
+.baloni{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+}
+/* Creating the balloon animation */
+@keyframes baloni{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    70%{
+       
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+/* Animation delays for balloon animation */
+.baloni img:nth-child(1){
+    animation-delay: 2s;
+    width: 55px;
+    opacity: 0;
+}
+.baloni img:nth-child(2){
+    animation-delay: 1s;
+    width: 60px;
+    opacity: 0;
+}
+.baloni img:nth-child(3){
+    animation-delay: 4s;
+    opacity: 0;
+}
+.baloni img:nth-child(4){
+    animation-delay: 200s;
+    width: 0px;
+    opacity: 0;
+  
+}
+.baloni img:nth-child(5){
+    animation-delay: 3s;
+    width: 90px;
+    opacity: 0;
+}
+.baloni img:nth-child(6){
+    animation-delay: 7s;
+    width: 30px;
+    opacity: 0;
+}
+.baloni img:nth-child(7){
+    animation-delay: 3.5s;
+    opacity: 0;
+}
+    </style>
+</head>
+<body>
+    <!-- Class for sign up form -->
+    <div class="container">
+        <div class="card">
+            <h3>Sign Up</h3>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                 <span>Password</span>
+            </div>
+
+            <button>Enter</button>
+        </div>
+    </div>
+    <!-- Class for animated balloons -->
+    <div class="baloni">
+        <img src="./images/balon.png">
+        <img src="./images/balon.png">
+        <img src="./images/balon.png">
+        <img src="./images/balon.png">
+        <img src="./images/balon.png">
+        <img src="./images/balon.png">
+        <img src="./images/balon.png">
+    </div>   
+</body>
+</html>

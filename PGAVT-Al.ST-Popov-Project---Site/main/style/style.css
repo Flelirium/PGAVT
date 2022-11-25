@@ -1,0 +1,175 @@
+body{
+    background-image: url("/main/images/main_background.png");
+    background-size: cover;
+}
+.baloni img{
+    width: 75px;
+    animation: baloni 7s linear infinite;
+}
+/* Balloon properties  */
+.baloni{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -1000px;
+}
+/* Creating the balloon animation */
+@keyframes baloni{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    70%{
+       
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+/* Animation delays for balloon animation */
+.baloni img:nth-child(1){
+    animation-delay: 2s;
+    width: 55px;
+}
+.baloni img:nth-child(2){
+    animation-delay: 1s;
+    width: 60px;
+}
+.baloni img:nth-child(3){
+    animation-delay: 4s;
+}
+.baloni img:nth-child(4){
+    animation-delay: 5.5s;
+    width: 40px;
+}
+.baloni img:nth-child(5){
+    animation-delay: 3s;
+    width: 90px;
+}
+.baloni img:nth-child(6){
+    animation-delay: 7s;
+    width: 30px;
+}
+.baloni img:nth-child(7){
+    animation-delay: 3.5s;
+}
+/*Вертикална черта в контейнера */
+.verticalLine{
+    border-left: 6px solid rgb(0, 0, 0);
+  height: 110px;
+  position: absolute;
+  left: 25%;
+  margin-left: -3px;
+  top: 0;
+}
+.blackLayerRectangleTop{  /* Here you can change the style of the rectangle */ 
+    width: 1922px;
+    height: 110px;
+    background-color: rgba(250, 250, 250, 1);
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.8
+}
+
+div img{  /*Here you can change the img properties */ 
+width: 400px;
+margin-left: 10px;
+}
+
+.container{                /*Here you can change the container properties */
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+
+.Links{                 /*Here you can change the Link/text properties - do note that positioning sometimes does the opposite - top = bottom - no idea why */
+    font-size: larger;
+    width: 45%;
+    position: absolute;
+    top: 0px;
+    right: 500px;
+    padding: 35px 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* Промяна на бутоните*/
+.Links button {
+    
+    background:white;
+    position: relative;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    border: none;
+    z-index: 1;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    cursor: pointer;
+    outline: none;
+}
+/* Промяна на анимацията след hover на бутоните*/
+.Links button:hover:after {
+  top: 0;
+  height: 100%;
+}
+/* Промяна на анимацията на бутоните*/
+.Links button:after {
+    position: absolute;
+    content: "";    
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 20px;
+    background-color: #4dccc6;
+     background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+/* Промяна на вътрешността на бутоните*/
+.Links button a {
+    text-decoration:none;
+    margin-left: -3px;
+    text-align: left;
+    color: black;
+}
+/* To change the color of the links until i figure out how to put them up there */
+ul a{ 
+    color: black;
+  }
+
+  /* mouse over link */
+ul a:hover {
+    color: hotpink;
+  }
+  
+
+
+
+
+
+
+
+
